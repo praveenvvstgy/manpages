@@ -401,14 +401,39 @@ div.funcsynopsis, div.cmdsynopsis {
 	background: #444;
 }
 
+div.informaltable {
+	overflow-x: auto;
+}
+
+div.blockquote {
+	width: 90%;
+	margin: auto;
+	overflow-x: auto;
+}
+
 div.funcsynopsis + div.funcsynopsis {
 	border: none;
 	margin-top: 1em;
 }
 
-pre.funcsynopsisinfo, pre.programlisting {
+pre, pre.funcsynopsisinfo, pre.programlisting {
 	width: auto;
 	margin: auto;
 	background-color: #ddd;
 	color: #444;
+	overflow-x: auto;
 }
+
+ body {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+@media only screen and (max-width: 40em) { /*640*/
+
+		#rt1 tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+	}
