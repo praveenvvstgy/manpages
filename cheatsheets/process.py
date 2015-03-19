@@ -30,7 +30,7 @@ for root, dirs, files in os.walk("./tldr/pages"):
 				inpage = open(os.path.join(directory,file), "r")
 				# Convert to HTML file
 				html = markdown2.markdown_path(directory + "/" + file)
-				html = '<!doctype html><html> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="style.css"> </head> <body> <article class="markdown-body"> ' + html + ' </article> </body></html>'
+				html = '<!doctype html><html> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="../style.css"> </head> <body> <article class="markdown-body"> ' + html + ' </article> </body></html>'
 				soup = BeautifulSoup(html)
 				for code in soup.find_all("code"):
 					code.wrap(soup.new_tag("pre"))
@@ -45,4 +45,3 @@ for root, dirs, files in os.walk("./tldr/pages"):
 # Sort the cheatsheets by name
 cheatsheets.sort()
 print json.dumps(cheatsheets, default=lambda o: o.__dict__)
-os.system("cp style.css " + output_cheatsheet_dir)

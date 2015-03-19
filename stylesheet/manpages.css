@@ -398,7 +398,7 @@ div.funcsynopsis, div.cmdsynopsis {
 	padding: 12px 16px;
 	overflow-x: auto;
 	color: #DDD;
-	background: #444;
+	background-color: #444;
 }
 
 div.informaltable {
@@ -432,8 +432,3 @@ pre, pre.funcsynopsisinfo, pre.programlisting {
 -ms-user-select: none;
 user-select: none;
 }
-
-@media only screen and (max-width: 40em) { /*640*/
-
-		#rt1 tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
-	}
