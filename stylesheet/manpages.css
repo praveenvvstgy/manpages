@@ -432,3 +432,7 @@ pre, pre.funcsynopsisinfo, pre.programlisting {
 -ms-user-select: none;
 user-select: none;
 }
+
+a.literalurl {
+	word-wrap: break-word;
+}
